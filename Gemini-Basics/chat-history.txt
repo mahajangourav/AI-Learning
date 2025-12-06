@@ -29,3 +29,166 @@ User: exit
 User: hi
 Bot: Hello! How can I help you today?
 User: bye
+User: hi
+Bot: Hi there! How can I help you today?
+User: what is node js?
+Bot: Node.js is an **open-source, cross-platform JavaScript runtime environment** that allows you to execute JavaScript code *outside* of a web browser.
+
+In simpler terms:
+
+1.  **JavaScript Everywhere:** Traditionally, JavaScript was confined to web browsers for interactive frontend experiences. Node.js broke that barrier, enabling developers to use JavaScript for server-side programming, networking applications, command-line tools, and more.
+2.  **Powered by Chrome's V8 Engine:** Node.js uses the same powerful V8 JavaScript engine that powers Google Chrome. This engine compiles JavaScript directly into native machine code, making Node.js very fast and efficient.
+3.  **Runtime Environment, Not a Language or Framework:** It's important to understand that Node.js is *not* a programming language itself, nor is it a framework. It's an **environment** that allows you to run JavaScript code and provides a set of built-in modules (like file system access, HTTP, network capabilities) that JavaScript doesn't have by default in a browser.
+
+---
+
+### Key Features and Concepts of Node.js:
+
+1.  **Asynchronous and Event-Driven:**
+    *   Node.js is designed to handle many concurrent connections efficiently. It uses an event-driven, non-blocking I/O model.
+    *   **Non-blocking I/O:** This means that when Node.js needs to perform an operation (like reading a file from the disk or querying a database), it doesn't wait for that operation to complete. Instead, it moves on to process other requests, and once the operation is finished, it gets notified (via an "event") and executes a callback function.
+    *   This makes Node.js highly performant and scalable, especially for applications that deal with a lot of concurrent I/O operations (like streaming data or real-time applications).
+
+2.  **Single-Threaded (with an Event Loop):**
+    *   While Node.js is fundamentally single-threaded for its main execution, it uses an "event loop" and worker threads behind the scenes to offload time-consuming tasks. This architecture allows it to handle thousands of concurrent connections efficiently without the overhead of multi-threading.
+
+3.  **Rich Ecosystem (npm - Node Package Manager):**
+    *   Node.js has the largest ecosystem of open-source libraries in the world, thanks to **npm**.
+    *   `npm` is a command-line utility for installing, managing, and sharing JavaScript packages (also called "modules" or "libraries"). This makes development incredibly fast, as you can leverage pre-built solutions for almost anything.
+
+4.  **Full-Stack JavaScript:**
+    *   One of the biggest advantages is that developers can use JavaScript for both the frontend (browser) and the backend (server). This leads to code reuse, reduced context switching, and often faster development cycles.
+
+---
+
+### Common Use Cases for Node.js:
+
+*   **Web Servers and APIs:** Building fast, scalable backend services (RESTful APIs, GraphQL APIs).
+*   **Real-time Applications:** Chat applications, live dashboards, online gaming, collaboration tools (due to its event-driven nature).
+*   **Microservices Architectures:** Breaking down large applications into smaller, independent services.
+*   **Streaming Applications:** Handling data streams efficiently (e.g., video streaming, data processing).
+*   **Command-Line Tools (CLIs):** Creating utility scripts and developer tools.
+*   **Server-Side Rendering (SSR):** For single-page applications built with frameworks like React, Angular, or Vue.
+*   **Internet of Things (IoT):** For lightweight server logic on devices.
+
+---
+
+In essence, Node.js empowers JavaScript to be a **general-purpose backend language**, capable of building robust, scalable, and high-performance applications outside the browser environment.
+User: Thank you
+Bot: You're very welcome! I'm glad I could help.
+
+Feel free to ask if you have any other questions or need anything else.
+User: bye
+Bot: Goodbye! 👋
+User: hi
+Bot: Hi there! How can I help you today?
+User: hi
+Bot: Hi there! How can I help you today?
+User: Hi
+Bot: Hello! How can I help you today?
+User: hi
+Bot: Hi there! How can I help you today?
+User: hi
+Bot: Hi there! How can I help you today?
+User: hi
+Bot: () => {
+        if (response.candidates && response.candidates.length > 0) {
+            if (response.candidates.length > 1) {
+                console.warn(`This response had ${response.candidates.length} ` +
+                    `candidates. Returning text from the first candidate only. ` +
+                    `Access response.candidates directly to use the other candidates.`);
+            }
+            if (hadBadFinishReason(response.candidates[0])) {
+                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);
+            }
+            return getText(response);
+        }
+        else if (response.promptFeedback) {
+            throw new GoogleGenerativeAIResponseError(`Text not available. ${formatBlockErrorMessage(response)}`, response);
+        }
+        return "";
+    }
+User: hi
+Bot: () => {
+        if (response.candidates && response.candidates.length > 0) {
+            if (response.candidates.length > 1) {
+                console.warn(`This response had ${response.candidates.length} ` +
+                    `candidates. Returning text from the first candidate only. ` +
+                    `Access response.candidates directly to use the other candidates.`);
+            }
+            if (hadBadFinishReason(response.candidates[0])) {
+                throw new GoogleGenerativeAIResponseError(`${formatBlockErrorMessage(response)}`, response);
+            }
+            return getText(response);
+        }
+        else if (response.promptFeedback) {
+            throw new GoogleGenerativeAIResponseError(`Text not available. ${formatBlockErrorMessage(response)}`, response);
+        }
+        return "";
+    }
+User: exit
+Bot: Goodbye! 👋
+User: hi
+Bot: Hi there! How can I help you today?
+User: whats the score of Ind vs SA?
+Bot: There isn't a match **currently live** between India and South Africa today (December 15, 2023).
+
+The most recent match was the **3rd T20I** played on December 14, 2023, which India won by 106 runs. The T20I series ended in a 1-1 draw.
+
+The next matches will be the **ODI series**, starting on December 17, 2023.
+User: whats is today's date
+Bot: Today's date is **June 11, 2024**.
+User: no its 6 Dec 2024
+Bot: Okay, December 6, 2024.
+
+Is there something specific you'd like to do or discuss related to that date? For example, are you correcting a previous statement, planning something, or asking about an event on that day?
+User: no its 6 Dec 2025
+Bot: Got it, December 6, 2025. Thanks for clarifying!
+User: whats the score of Ind vs SA?
+Bot: I don't have real-time access to live sports scores. To get the most accurate and up-to-the-minute score for the India vs. South Africa match, I recommend checking one of the following:
+
+*   **Live sports websites:** ESPN Cricinfo, Cricbuzz, BBC Sport, or official ICC website.
+*   **Sports apps:** Download a dedicated cricket or sports app.
+*   **Search Engine:** Type "Ind vs SA live score" into Google or your preferred search engine.
+
+Please specify if you're looking for a Test, ODI, or T20I match, as there are often different series happening.
+User: hi
+Bot: Hi there! How can I help you today?
+User: bye
+Bot: Goodbye! 👋
+User: Which model are you?
+Bot: I am a large language model, trained by Google.
+User: whats the name flash, pro?
+Bot: Of course! The name "FlashPro" most commonly refers to two very different things:
+
+### 1. Adobe Flash Professional (Software)
+
+This is likely what most people think of first, especially in a tech or design context.
+
+*   **What it was:** The professional software application used to create animations, games, and rich web applications using the Adobe Flash platform. It was the industry standard for creating the interactive web content that was popular in the 2000s and early 2010s.
+*   **Current Status:** **Discontinued.** Adobe Flash technology was officially declared "end-of-life" at the end of 2020 due to security issues and the rise of modern web standards like HTML5.
+*   **What it became:** The software itself evolved and was renamed **Adobe Animate**. Adobe Animate can still do everything Flash Professional could, but it now exports to modern formats like HTML5 Canvas, WebGL, and video, instead of the old Flash (.SWF) format.
+
+**In short: If you're thinking of animation software, the name is Adobe Animate now, but it used to be called Adobe Flash Professional.**
+
+---
+
+### 2. Hondata FlashPro (Automotive)
+
+In the car enthusiast world, "FlashPro" means something completely different.
+
+*   **What it is:** A hardware and software tool made by the company **Hondata**.
+*   **What it does:** It allows you to "flash" or reprogram the Engine Control Unit (ECU) of modern Honda and Acura vehicles.
+*   **Why people use it:** Car tuners and enthusiasts use it to adjust engine parameters to increase horsepower, improve fuel efficiency, and account for performance modifications like turbochargers or new exhaust systems.
+
+**In short: If you're talking about tuning a Honda or Acura, the name is Hondata FlashPro.**
+
+---
+
+To know which one you mean, what was the context? Were you talking about **animation and websites** or **tuning cars**?
+User: no i mean which model name are you?
+Bot: I am a large language model, trained by Google.
+User: whats is today's date?
+Bot: Today is **Tuesday, June 11, 2024**.
+User: bye
+Bot: Goodbye! 👋
