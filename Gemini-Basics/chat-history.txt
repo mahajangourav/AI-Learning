@@ -19,3 +19,13 @@ Bot: Interesting! Tell me more…
 User: g
 Bot: Interesting! Tell me more…
 User: exit
+User: hi
+Bot: Hello! How can I help you today?
+User: am so happy today
+Bot: Yay! I'm happy to hear that! 😄
+User: am so sad
+Bot: I'm sorry you're feeling that way. I'm here to chat if it helps! 🤗
+User: exit
+User: hi
+Bot: Hello! How can I help you today?
+User: bye
