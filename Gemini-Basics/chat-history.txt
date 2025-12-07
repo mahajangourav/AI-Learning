@@ -192,3 +192,10 @@ User: whats is today's date?
 Bot: Today is **Tuesday, June 11, 2024**.
 User: bye
 Bot: Goodbye! 👋
+User: hi
+User: hi
+User: hi
+User: hi
+Bot: Hello! How can I help you today?
+User: happy
+Bot: I'm happy to hear that! 😄 Keep smiling!
