@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gemini AI Chatbot</title>
+
+<!-- Basic UI styling -->
+<style>
+  body { font-family: Arial, sans-serif; background: #eef1f4; }
+  #chat {
+    width: 100%; max-width: 450px; margin: auto;
+    background: #fff; margin-top: 30px; padding: 15px;
+    border-radius: 10px; height: 450px; overflow-y: auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  }
+  .msg { padding: 10px; border-radius: 8px; margin: 8px 0; max-width: 80%; }
+  .me { background: #007bff; color: white; margin-left: auto; }
+  .bot { background: #ddd; color: black; margin-right: auto; }
+  #inputBox { max-width: 450px; margin: auto; display: flex; gap: 10px; margin-top: 15px; }
+  input { flex: 1; padding: 12px; border-radius: 6px; border: 1px solid #aaa; }
+  button { padding: 12px 20px; background: #007bff; border: none;
+           color: white; border-radius: 6px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;">🤖 Gemini AI Chatbot</h2>
+
+<div id="chat"></div>
+
+<div id="inputBox">
+  <input id="userInput" placeholder="Type your message..."/>
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
