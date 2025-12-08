@@ -1,6 +1,5 @@
 const chatBox = document.getElementById("chat");
 const input = document.getElementById("userInput");
-
 // Called when user clicks "Send" button
 async function sendMessage() {
   const text = input.value.trim();
@@ -9,20 +8,38 @@ async function sendMessage() {
   addMessage(text, "me"); // Show user message
   input.value = "";
 
-  // Show temporary "thinking" message
   addMessage("Bot is typing…", "bot", true);
 
-  // Send message to backend API
-  const res = await fetch("/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message: text }),
-  });
+  try {
+    // Send message to backend API
+    const res = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text }),
+    });
 
-  const data = await res.json();
+    const data = await res.json();
 
-  removeTyping(); // remove "typing..."
-  addMessage(data.reply, "bot"); // display AI response
+    removeTyping(); // remove "typing..."
+
+    // Handle Rate Limits
+    if (data.type === "minute") {
+      addMessage("⏳ Too many requests! Please wait 1 minute.", "bot");
+      return;
+    }
+
+    if (data.type === "daily") {
+      addMessage("🚫 Free plan daily limit reached! Try again tomorrow.", "bot");
+      return;
+    }
+
+    addMessage(data.reply, "bot");
+
+  } catch (error) {
+    removeTyping();
+    addMessage("⚠ Something went wrong! Try again later.", "bot");
+    console.error(error);
+  }
 }
 
 // Display messages in UI chat section
